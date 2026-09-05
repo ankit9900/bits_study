@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "subject": "dnn",
+    "title": "2026aj05348",
+    "filename": "2026aj05348.pdf",
+    "path": "pdfs/dnn/2026aj05348.pdf"
+  },
+  {
+    "subject": "dnn",
+    "title": "DNN Exam Survival Pack Detailed",
+    "filename": "DNN_Exam_Survival_Pack_Detailed.pdf",
+    "path": "pdfs/dnn/DNN_Exam_Survival_Pack_Detailed.pdf"
+  },
+  {
+    "subject": "dnn",
+    "title": "unit 1",
+    "filename": "unit-1.pdf",
+    "path": "pdfs/dnn/unit-1.pdf"
+  }
+]
