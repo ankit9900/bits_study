@@ -4,63 +4,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Study Library</title>
-  <meta name="description" content="A simple personal library for publishing study PDFs.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="./">My Study Library</a>
-      <nav>
-        <a href="#subjects">Subjects</a>
-        <a href="#about">About</a>
-      </nav>
-      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">☾</button>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="./">My Study Library</a>
+    <nav><a href="#subjects">Subjects</a><a href="#about">About</a></nav>
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">☾</button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <p class="eyebrow">PERSONAL PDF LIBRARY</p>
+    <h1>All your study material,<br><span>in one place.</span></h1>
+    <p class="hero-copy">Browse, search, view, and download your published PDF notes.</p>
+    <label class="search-wrap">
+      <span>⌕</span>
+      <input id="search" type="search" placeholder="Search PDFs, subjects, or topics...">
+    </label>
+  </section>
+
+  <section id="subjects" class="library">
+    <div class="section-heading">
+      <div><p class="eyebrow">LIBRARY</p><h2>Study materials</h2></div>
+      <span id="resultCount" class="result-count"></span>
     </div>
-  </header>
+    <div id="libraryGrid"></div>
+    <div id="emptyState" class="empty" hidden>
+      <h3>No PDFs found</h3>
+      <p>Upload a PDF inside the <code>pdfs/</code> folder and commit it.</p>
+    </div>
+  </section>
 
-  <main class="container">
-    <section class="hero">
-      <p class="eyebrow">PERSONAL PDF LIBRARY</p>
-      <h1>All your study material,<br><span>in one place.</span></h1>
-      <p class="hero-copy">Browse, search, view, and download your published PDF notes.</p>
-      <label class="search-wrap">
-        <span>⌕</span>
-        <input id="search" type="search" placeholder="Search PDFs, subjects, or topics..." autocomplete="off">
-      </label>
-    </section>
+  <section id="about" class="about">
+    <p class="eyebrow">HOW IT WORKS</p>
+    <h2>Just upload PDFs.</h2>
+    <p>The site automatically reads the folders and filenames. You do not edit JSON or JavaScript when adding a PDF.</p>
+    <ol>
+      <li>Put a PDF inside <code>pdfs/SubjectName/</code>.</li>
+      <li>Commit and push it to GitHub.</li>
+      <li>GitHub automatically updates the PDF list.</li>
+    </ol>
+  </section>
+</main>
 
-    <section id="subjects" class="library">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">LIBRARY</p>
-          <h2>Study materials</h2>
-        </div>
-        <span id="resultCount" class="result-count"></span>
-      </div>
-      <div id="libraryGrid"></div>
-      <div id="emptyState" class="empty" hidden>
-        <h3>No PDFs found</h3>
-        <p>Try another search term or add a PDF to your content file.</p>
-      </div>
-    </section>
-
-    <section id="about" class="about">
-      <p class="eyebrow">HOW TO ADD PDFs</p>
-      <h2>Drop in a PDF, then publish.</h2>
-      <ol>
-        <li>Put your PDF inside the <code>pdfs/</code> folder.</li>
-        <li>Add one entry to <code>content.json</code>.</li>
-        <li>Push the changes to GitHub. GitHub Pages publishes the update.</li>
-      </ol>
-    </section>
-  </main>
-
-  <footer class="container footer">
-    <span>My Study Library</span>
-    <span>Built with HTML, CSS & JavaScript</span>
-  </footer>
-
-  <script src="app.js"></script>
+<footer class="container footer">
+  <span>My Study Library</span>
+  <span>Automatic PDF library</span>
+</footer>
+<script src="app.js"></script>
 </body>
 </html>
